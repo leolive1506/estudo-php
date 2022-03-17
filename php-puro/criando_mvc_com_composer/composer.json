@@ -1,0 +1,15 @@
+{
+    "name": "leo/criando_mvc_com_composer",
+    "autoload": {
+        "psr-4": {
+            "App\\": "source"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leonardo",
+            "email": "leonardolivelopes2@gmail.com"
+        }
+    ],
+    "require": {}
+}

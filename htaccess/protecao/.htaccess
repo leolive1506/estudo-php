@@ -1,0 +1,6 @@
+Options -Indexes
+
+AuthType Basic
+AuthName "Acesso restrito leo"
+AuthUserFile /home/leo/estudo-php/htaccess/protecao/.htpasswd
+Require valid-user

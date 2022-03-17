@@ -1,0 +1,204 @@
+@charset "UTF-8";
+:root {
+  --background: #f0f2f5;
+  --green: #33CC95;
+  --red: #E52E4D;
+  --blue: #5429CC;
+  --blue-light: #6933FF;
+  --text-title: #363F5F;
+  --text-body: #969CB3;
+  --shape: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+  html {
+    /* 15px */
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    /* 14px */
+    font-size: 87.5%;
+  }
+}
+
+body, input, textarea, button {
+  /* input, textarea e button não importam por padrão a font do body */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smooth: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+header {
+  background: var(--blue);
+  padding: 4rem;
+}
+
+header nav ul {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+header nav ul li:hover {
+  border-bottom: 1px solid #FFF;
+}
+header nav ul li a {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 1.4rem;
+}
+
+.container-list {
+  padding: 3rem 1rem;
+}
+.container-list li {
+  border: 1px solid var(--text-body);
+  padding: 0.2rem 0.5rem;
+}
+.container-list li + li {
+  margin-top: 1rem;
+}
+.container-list li .item-list p {
+  word-wrap: break-word;
+  overflow: auto;
+}
+.container-list .acoes {
+  display: flex;
+  gap: 2rem;
+}
+
+form h1 {
+  text-align: center;
+}
+form div.group + .group {
+  margin-top: 1rem;
+}
+form div.group label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+form div.group input, form div.group textarea {
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  outline: 0;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #ccc;
+}
+form div.group input:focus, form div.group textarea:focus {
+  border-bottom: 1px solid #000;
+}
+form div.group textarea {
+  height: 5rem;
+  resize: none;
+}
+
+.form-create, .form-edit {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.form-create div.group, .form-edit div.group {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: center;
+}
+.form-create .group.actions, .form-edit .group.actions {
+  grid-template-columns: 1fr 1fr;
+  gap: 50%;
+}
+.form-create .group.actions button, .form-create .group.actions a, .form-edit .group.actions button, .form-edit .group.actions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green);
+  border-radius: 0.25rem;
+  padding: 0 2rem;
+  height: 3rem;
+  border: 0;
+  transition: filter 0.2s;
+  color: #FFF;
+  font-weight: bold;
+}
+.form-create .group.actions button:hover, .form-create .group.actions a:hover, .form-edit .group.actions button:hover, .form-edit .group.actions a:hover {
+  filter: brightness(0.9);
+}
+.form-create .group.actions a, .form-edit .group.actions a {
+  background: var(--red);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.container h1 {
+  padding: 1rem;
+  text-align: center;
+}
+.container table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+}
+.container table th {
+  color: var(--text-title);
+  font-weight: 400;
+  padding: 1rem 2rem;
+  text-align: left;
+  line-height: 1.5rem;
+}
+.container table td {
+  padding: 1rem 2rem;
+  border: 0;
+  background: var(--shape);
+  color: var(--text-body);
+}
+.container table td:first-child {
+  color: var(--text-title);
+}
+.container table td.deposit {
+  color: var(--green);
+}
+.container table td.withdraw {
+  color: var(--red);
+}
+
+.invisivel {
+  display: none;
+}
+
